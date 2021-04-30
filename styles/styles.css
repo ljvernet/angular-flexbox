@@ -1,6 +1,7 @@
-*{
-    margin: 10px;
-    padding: 10px;
+
+body{
+    margin: 40px;
+    padding: 20px;
     box-sizing: border-box;
 }
 .padre{
@@ -11,35 +12,81 @@
     .header{
         display: flex;
         flex-flow: column nowrap;
-    background: #000;
+        background: url("../images/fondo_cabezera3.jpg")  no-repeat center center/cover;
     }
     .menu{
+        margin-top: -60px;
         display: flex;
         flex-flow: row nowrap;
-        background: #120078;
-        height: 100px;
+        height: auto;
         align-items: center;
+        margin-bottom: 150px;
+        justify-content: space-between;
     }
+   .logo img{
+       margin-top: 10px;
+       width: 4em;
+   }
         .logo{
-            flex:1 1 auto;
-            background: #9d0191;
-            height: 30px;
+          width: 10%;
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
         }
         .nav{
-            flex:5 1 auto;
-            background: #9d0191;
-            height: 30px;
+            flex:10 1 auto;
+            justify-content:space-between;
+            align-items: center;
         }
-        .social{
-            flex:1 1 auto;
-            background: #9d0191;
-            height: 30px;
+        .nav ul {
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-top:-35px;
+            display: flex;
+            justify-content: space-around;
+
         }
-    .texto-principal{
-        background: #fd3a69;
+        .social {
+            flex: 0 1 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-content:center;
+            margin-right: 10px;
+            width: 20px;
+         
     }
+    .social .icon{
+        font-size: 1.8em;
+        margin-bottom: 15px;;
+    }
+    @keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+.rotate:hover{
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+a{
+    text-decoration: none;
+}  
+li{
+    margin: 5px;
+    list-style-type:none;
+}
+li:hover{
+    transform:scale(1.35);
+}
+    .texto-principal{
+        margin: auto;   }
         H1{
-            background: #fecd1a;
+            color:red;
+            font-size: 40px;
+            font-weight: bold;
+            opacity: 0.6;
         }
 .section{
     background: #000;
@@ -77,8 +124,15 @@
         background: #fed049;
         width: 300px;
     }
+ 
     @media all and (max-width: 800px){
-
+        .logo img{
+            margin-top: 10px;
+            width: 4em;
+        }
+        .nav{
+            margin-top: 20px;
+        }
         .section{
         flex-direction: column;
         }
@@ -86,9 +140,16 @@
         .aside{
             display: flex;
             justify-content: center;
-            flex-direction: column;
         }
+        .icon {
+            font-size: 20px;
+        }
+        .logo img{
+            margin-top: -20px;
+            width: 3em;
     }
+    }
+    
     @media all and (max-width: 600px){
         .articulos{
             flex-direction: column;
@@ -100,13 +161,4 @@
             
         }
     }
-    @media all and (max-width: 400px){
-        .menu{
-            height: auto;
-            flex-direction: column;
-            justify-content: center;
-            align-items:stretch;
-            
-        }
     
-    }
