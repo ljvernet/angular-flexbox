@@ -75,5 +75,19 @@
 }
     .pie{
         background: #fed049;
-        width: 300px;
+        width: 90%;
     }
+    @media all and (max-width: 800px){
+
+        .section{
+        flex-direction: column;
+        
+        }
+              .aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+    }
+    
