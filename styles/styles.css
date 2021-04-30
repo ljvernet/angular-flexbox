@@ -1,0 +1,79 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+}
+    .header{
+        display: flex;
+        flex-flow: column nowrap;
+    background: #000;
+    }
+    .menu{
+        display: flex;
+        flex-flow: row nowrap;
+        background: #120078;
+        height: 100px;
+        align-items: center;
+    }
+        .logo{
+            flex:1 1 auto;
+            background: #9d0191;
+            height: 30px;
+        }
+        .nav{
+            flex:5 1 auto;
+            background: #9d0191;
+            height: 30px;
+        }
+        .social{
+            flex:1 1 auto;
+            background: #9d0191;
+            height: 30px;
+        }
+    .texto-principal{
+        background: #fd3a69;
+    }
+        H1{
+            background: #fecd1a;
+        }
+.section{
+    background: #000;
+    display: flex;
+
+}
+    .articulos{
+        background: #413c69;
+        flex: 2  1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .article{
+            background: #4a47a3;
+            flex: 1 1 40%;
+            
+        }
+        .navegacion{
+            background: #709fb0;
+            flex:  1 1 100%;
+        }
+        .aside{
+            background: #a7c5eb;
+            flex: 1 1 auto;
+        }
+        .publicidad{
+            background: #fbeeac;
+        }
+.footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+    .pie{
+        background: #fed049;
+        width: 300px;
+    }
