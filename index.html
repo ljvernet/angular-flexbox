@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0", maximum-scale=1.0,  minimun-scale=1.0">
-    <title>Flex Box nivel 2 ejercicio 1</title>
+    <title>Flex Box nivell 2 exercici 2 </title>
     <script src="https://kit.fontawesome.com/da815974b9.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="styles/styles.css">
-      
+   <script src="scripts/desplegar.js"></script>
+    
 </head>
 <body>
     <div class="padre">
@@ -36,20 +37,97 @@
             </header>
         <section class="section">
             <div class="articulos">
-            <article class="article">aaaa</article>
-            <article class="article">aaa</article>
-            <article class="article">aaa</article>
-            <article class="article">aaa</article>
-            <nav class="navegacion">a<aa/nav>
+            <article class="article">
+                <div class="caja">
+                    <img src="images/japon1.jpg"> 
+                    <p class="textoImagen">30 de Marzo de 2021</p>
+                    <p class="textoImagen2">PAISAJES</p></img>
+                </div>
+                 <p>
+                    Un águila y una zorra que eran muy amigas decidieron vivir juntas 
+                    con la idea de que eso reforzaría su amistad. Entonces el águila escogió 
+                    un árbol muy elevado para poner allí sus huevos, mientras que la zorra soltó 
+                    a sus hijos bajo unas zarzas sobre la tierra al pie del mismo árbol. 
+                    Un día que la zorra salió a buscar su comida, el águila, que estaba 
+                    hambrienta cayó sobre las zarzas, se llevó a los zorruelos, y entonces ella 
+                    y sus crías se regozijaron con un banquete. 
+                    <a href="#" onclick="vermas('mas');" id="mas">... [leer más]</a>
+                    </p>
+                    <p id="desplegar" style="display:none;">
+                     Regresó la zorra y más le dolió el no poder vengarse, que saber de la 
+                     muerte de sus pequeños; ¿Cómo podría ella, siendo un animal terrestre,
+                     sin poder volar, perseguir a uno que vuela? Tuvo que conformarse con
+                    el usual consuelo de los débiles e impotentes: maldecir desde lejos
+                     a su enemigo.
+                     <br />
+                     Mas no pasó mucho tiempo para que el águila recibiera el pago de su 
+                   traición contra la amistad. Se encontraban en el campo unos pastores
+                     sacrificando una cabra; cayó el águila sobre ella y se llevó 
+                     una víscera que aún conservaba fuego, colocándola en su nido. 
+                     Vino un fuerte viento y transmitió el fuego a las pajas, ardiendo 
+                    también sus pequeños aguiluchos, que por pequeños aún no sabían volar, 
+                     los cuales se vinieron al suelo. Corrió entonces la zorra, y tranquilamente
+                    devoró a todos los aguiluchos ante los ojos de su enemiga. <br />
+                     <b>“Nunca traiciones la amistad sincera, pues si lo hicieras, tarde 
+                     o temprano del cielo llegará el castigo”.</b>
+                     <a href="#" onclick="vermas('menos');" id="menos">... [leer menos]</a>
+                     </p> 
+            </article>
+            <article class="article">  
+                 <div class="caja">
+                    <img src="images/japon2.jpg"> 
+                    <p class="textoImagen">3 de Marzo de 2021</p>
+                    <p class="textoImagen2">CULTURA</p></img>
+                </div>
+                   <p>
+                    Un águila y una zorra que eran muy amigas decidieron vivir juntas 
+                    con la idea de que eso reforzaría su amistad. Entonces el águila escogió 
+                    un árbol muy elevado para poner allí sus huevos, mientras que la zorra soltó 
+                    a sus hijos bajo unas zarzas sobre la tierra al pie del mismo árbol. 
+                    Un día que la zorra salió a buscar su comida, el águila, que estaba 
+                    hambrienta cayó sobre las zarzas, se llevó a los zorruelos, y entonces ella 
+                    y sus crías se regozijaron con un banquete. 
+                    <a href="#" onclick="vermas2('mas2');" id="mas2">... [leer más]</a>
+                    </p>
+                    <p id="desplegar2" style="display:none;">
+                     Regresó la zorra y más le dolió el no poder vengarse, que saber de la 
+                     muerte de sus pequeños; ¿Cómo podría ella, siendo un animal terrestre,
+                     sin poder volar, perseguir a uno que vuela? Tuvo que conformarse con
+                    el usual consuelo de los débiles e impotentes: maldecir desde lejos
+                     a su enemigo.
+                     <br />
+                     Mas no pasó mucho tiempo para que el águila recibiera el pago de su 
+                   traición contra la amistad. Se encontraban en el campo unos pastores
+                     sacrificando una cabra; cayó el águila sobre ella y se llevó 
+                     una víscera que aún conservaba fuego, colocándola en su nido. 
+                     Vino un fuerte viento y transmitió el fuego a las pajas, ardiendo 
+                    también sus pequeños aguiluchos, que por pequeños aún no sabían volar, 
+                     los cuales se vinieron al suelo. Corrió entonces la zorra, y tranquilamente
+                    devoró a todos los aguiluchos ante los ojos de su enemiga. <br />
+                     <b>“Nunca traiciones la amistad sincera, pues si lo hicieras, tarde 
+                     o temprano del cielo llegará el castigo”.</b>
+                     <a href="#" onclick="vermas2('menos2');" id="menos2">... [leer menos]</a>
+                     </p> 
+            </article>
+            <article class="article"> 
+                <img src="images/japon3.jpg">
+            </article>
+            <article class="article"> 
+                <img src="images/japon4.jpg">
+            </article>
             </div>
             <aside class="aside">
-                <div class="publicidad">aaaa</div>
-                <div class="publicidad">aaaa</div>
+                <div class="publicidad">
+                    <img src="images/publicidad1.jpg">
+                </div>
+                <div class="publicidad">
+                    <img src="images/publicidad2.webp">
+                </div>
             </aside>
         </section>
         <footer class="footer">
             
-            <nav class="pie"><p>aaa</p></nav>
+            <nav class="pie"><p>PIE</p></nav>
         </footer>
     </div>
 

@@ -1,13 +1,27 @@
-
+              /* RESETEO DE ESTILOS */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: 100%;
+}
+:focus {outline: none;}
+header, hgroup, aside, section, nav, footer, article, img {
+    display: block;
+}
+        /* FIN RESETEO DE ESTILOS */
 body{
-    margin: 40px;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
 }
 .padre{
     display: flex;
     flex-flow: column;
     flex-wrap: nowrap;
+    width: 100%;
 }
     .header{
         display: flex;
@@ -15,7 +29,7 @@ body{
         background: url("../images/fondo_cabezera3.jpg")  no-repeat center center/cover;
     }
     .menu{
-        margin-top: -60px;
+
         display: flex;
         flex-flow: row nowrap;
         height: auto;
@@ -25,36 +39,36 @@ body{
     }
    .logo img{
        margin-top: 10px;
-       width: 4em;
+       width: 70%;
    }
         .logo{
-          width: 10%;
+            width: 10%;
             order: 0;
             flex: 0 1 auto;
             align-self: auto;
         }
         .nav{
-            flex:10 1 auto;
+            position: relative;
+            margin-top: -5%;
+            flex: 15 1 auto;
             justify-content:space-between;
             align-items: center;
         }
         .nav ul {
             padding-left: 10%;
             padding-right: 10%;
-            margin-top:-35px;
             display: flex;
             justify-content: space-around;
-
         }
         .social {
+            margin-top: -4%;
             flex: 0 1 10px;
             flex-wrap: wrap;
             justify-content: flex-end;
             align-items: flex-end;
             align-content:center;
-            margin-right: 10px;
+            margin-right: 20px;
             width: 20px;
-         
     }
     .social .icon{
         font-size: 1.8em;
@@ -81,7 +95,10 @@ li:hover{
     transform:scale(1.35);
 }
     .texto-principal{
-        margin: auto;   }
+    
+        margin: auto;  
+        margin-top: 20px;
+     }
         H1{
             color:red;
             font-size: 40px;
@@ -89,67 +106,107 @@ li:hover{
             opacity: 0.6;
         }
 .section{
-    background: #000;
     display: flex;
-
+    background-color: #e9e9e9;
 }
+.section img, .aside img{
+    border: #d8d8d8 15px solid;
+    width: 90%;
+    margin-top: 10px;
+    object-fit: cover;
+      object-position: center center;      
+}
+.caja img{
+position: relative;;
+}
+.textoImagen{
+    position:absolute;
+    margin-top: -5%;
+    margin-left: 1%;
+    color:white;
+    font-weight: bold;
+}
+.article .textoImagen2{
+    width: 40.4%;
+    position:absolute;
+    margin-top: -2%;
+    color: white;
+    background-color: red;
+  }
     .articulos{
-        background: #413c69;
         flex: 2  1 auto;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row wrap;        
     }
         .article{
-            background: #4a47a3;
-            flex: 1 1 40%;
-            
+           padding-bottom: 10px;
+            flex: 1  40%;
         }
-        .navegacion{
-            background: #709fb0;
-            flex:  1 1 100%;
-        }
-        .aside{
-            background: #a7c5eb;
-            flex: 1 1 auto;
+         .article p {
+             width: 90%;
+             font-size: 1.5em;
+            text-align: justify;
+            padding-left: 3px;
+            }             
+    .aside{
+        flex: 1  1 auto;
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+            margin-right: 50px;    
         }
         .publicidad{
-            background: #fbeeac;
-        }
+           width: 150%;
+                    }          
 .footer{
-    background: #000;
-    display: flex;
+      display: flex;
     justify-content: center;
 }
     .pie{
         background: #fed049;
-        width: 300px;
+        width: 70%;
+        text-align: center;
+    }      
+/*  ///////////// media cuery 1000 /////////////////////  */ 
+    @media all and (max-width: 1000px){
+        .textoImagen{
+            margin-top: -6%;
+            margin-left: 1%;
+        }
+        .article .textoImagen2{
+            width: 39%;
+            margin-top: -3%;
+        }
     }
- 
+  /*  ///////////// media cuery 800 /////////////////////  */ 
     @media all and (max-width: 800px){
-        .logo img{
-            margin-top: 10px;
-            width: 4em;
-        }
-        .nav{
-            margin-top: 20px;
-        }
         .section{
         flex-direction: column;
         }
-        
         .aside{
             display: flex;
             justify-content: center;
         }
-        .icon {
-            font-size: 20px;
-        }
-        .logo img{
-            margin-top: -20px;
-            width: 3em;
+
+    .icon {
+        font-size: 20px;
     }
+    .nav{
+        margin-top:-10px
     }
-    
+    .article .textoImagen2{
+        width: 45%;
+        margin-top: -3%;
+    }
+    .textoImagen{
+        margin-top: -7%;
+        margin-left: 2%;
+    }
+}
+.publicidad{
+    width: 90%;
+             }     
+     /*  ///////////// media cuery 600 /////////////////////  */ 
     @media all and (max-width: 600px){
         .articulos{
             flex-direction: column;
@@ -157,8 +214,23 @@ li:hover{
         .aside{
             display: flex;
             flex-direction: column;
+            justify-content: center; 
+        }
+        .article .textoImagen2{
+            width: 85%;
+            margin-top: -6%;
+        }
+        .textoImagen{
+            margin-top: -11%;
+            margin-left: 2%;
+        }
+    } 
+     /*  ///////////// media cuery 400 /////////////////////  */ 
+    @media all and (max-width: 400px){
+        .menu{
+            height: auto;
+            flex-direction: column;
             justify-content: center;
-            
+            align-items:stretch;    
         }
     }
-    
