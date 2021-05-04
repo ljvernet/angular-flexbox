@@ -1,112 +1,110 @@
-*{
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.padre{
-    display: flex;
-    flex-flow: column;
-    flex-wrap: nowrap;
-}
-    .header{
-        display: flex;
-        flex-flow: column nowrap;
-    background: #000;
-    }
-    .menu{
-        display: flex;
-        flex-flow: row nowrap;
-        background: #120078;
-        height: 100px;
-        align-items: center;
-    }
-        .logo{
-            flex:1 1 auto;
-            background: #9d0191;
-            height: 30px;
-        }
-        .nav{
-            flex:5 1 auto;
-            background: #9d0191;
-            height: 30px;
-        }
-        .social{
-            flex:1 1 auto;
-            background: #9d0191;
-            height: 30px;
-        }
-    .texto-principal{
-        background: #fd3a69;
-    }
-        H1{
-            background: #fecd1a;
-        }
-.section{
-    background: #000;
-    display: flex;
-
-}
-    .articulos{
-        background: #413c69;
-        flex: 2  1 auto;
-        display: flex;
-        flex-flow: row wrap;
-    }
-        .article{
-            background: #4a47a3;
-            flex: 1 1 40%;
-            
-        }
-        .navegacion{
-            background: #709fb0;
-            flex:  1 1 100%;
-        }
-        .aside{
-            background: #a7c5eb;
-            flex: 1 1 auto;
-        }
-        .publicidad{
-            background: #fbeeac;
-        }
-.footer{
-    background: #000;
-    display: flex;
+              /* RESETEO DE ESTILOS */
+              *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                border: none;
+                outline: none;
+                font-size: 100%;
+            }
+            :focus {outline: none;}
+            header, hgroup, aside, section, nav, footer, article, img {
+                display: block;
+            }
+                    /* FIN RESETEO DE ESTILOS */
+            body{
+                height: 100vh;
+                padding: 30px;
+            }
+main{
+    /* height: 100vh; */
+    display: grid;
+    grid-gap:10px;
+        grid-template: 
+        /* FILAS */
+        [inicio] "header header header" 1fr
+         [contenido-start] "contenido contenido aside" 4fr
+         "footer footer footer" 0.5fr [fin]
+        /
+        /* COLUMNAS */
+        [inicio] 1fr [contenido-start] 2fr  1fr [fin];
+} 
+main > * {
+    /* display: flex; */
     justify-content: center;
-}
-    .pie{
-        background: #fed049;
-        width: 300px;
-    }
-    @media all and (max-width: 800px){
+    align-items: center;
+    background-color: goldenrod;
+} 
 
-        .section{
-        flex-direction: column;
-        }
-        
-        .aside{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-    }
-    @media all and (max-width: 600px){
-        .articulos{
-            flex-direction: column;
-        }
-        .aside{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-        }
-    }
-    @media all and (max-width: 400px){
-        .menu{
-            height: auto;
-            flex-direction: column;
-            justify-content: center;
-            align-items:stretch;
-            
-        }
-    
+/* DEFINIMOS LAS AREAS */
+header{
+    grid-area: header;
+}
+article{
+    grid-area: contenido;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+header{
+    height: 200px;
+    background: url("../images/fondo_cabezera3.jpg")  no-repeat center center/cover;
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 3fr 2fr; 
+}
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 25%;
+    background: url("../images/logo.png")  no-repeat center center/cover;
+    margin-left: 10px;
+    background-color: purple;
+    justify-self: start;
+}
+
+.social{
+    grid-area: 1 / 3 / 2 / 4;
+    justify-self:end;
+    margin-right:10px;
+}
+.social .icon{  
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+ .texto-principal{
+     font-size: 2.5em;
+    justify-self: center;
+    text-align: center;
+      grid-area: 2 / 1 / 3 / 4;  
+} 
+.nav ul {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 1.2em;
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 830px){
+  
     }
