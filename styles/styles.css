@@ -86,9 +86,6 @@ header{
     margin-top: -2%;
 }
 
-
-
-
 a{
     text-decoration: none;
 }  
@@ -127,14 +124,16 @@ transform-origin: 50% 50%;
         display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr;
-    
     }
-    /* .article {
-        display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 2fr 2fr;
+    .articulos{
+        display: flex;
+        flex-wrap: wrap;  
+    }
     
-    } */
+     .article {
+   width: 50%;
+    
+    } 
 
 .section img, .aside img{
 border: #d8d8d8 15px solid;
@@ -156,30 +155,19 @@ color:white;
 font-weight: bold;
 }
 .article .textoImagen2{
-width: 40.4%;
+width: 30%;
 position:absolute;
 margin-top: -2%;
 color: white;
 background-color: red;
 }
-
-  /*   section{
-        grid-area: 2 / 3 / 4 / 4;
-        padding-bottom: 10px;
-    } */
-     .article p {
+       .article p {
          width: 80%;
          font-size: 1.5em;
         text-align: justify;
         padding-left: 3px;
         } 
-      /*   aside {
-            grid-area: 2 / 3 / 4 / 4;
-                       
-        } */
-
-  
-
+     
   .pie p{
       text-align: center;
   } 
@@ -189,25 +177,3 @@ background-color: red;
   
     }
 
-
-
-
-    /* .aside{
-    flex: 1  1 auto;
-    display: flex;
-    align-items:center;
-    flex-direction: column;
-        margin-right: 50px;    
-    } 
-    .publicidad{
-       width: 150%;
-                } */
-
-/* .footer{
-    
-        display: grid;
-        grid-template-columns: 120px ;
-        grid-template-rows: 20px; 
- /*    width: 100%; */
-    /* display: flex; */
-  /* justify-content: center; */
